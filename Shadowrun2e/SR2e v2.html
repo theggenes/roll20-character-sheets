@@ -1,0 +1,243 @@
+						<table>
+							<tr>
+								<td>
+									<img src="SRlogo.JPG">
+								</td>
+								<td style='padding:20px' />
+									Name: <input type="text" name="attr_name" /><br /><br />
+									Race: <input type="text" name="attr_metatype" /><br /><br />
+									Sex: <input type="text" name="attr_sex" style='width:100px;' /> Age: <input type="number" name="attr_age" /><br /><br />
+									Height: <input type='number' name='attr_height' style='width:46px' />cm
+									Weight: <input type='number' name='attr_weight' step='0.01' style='width:60px' />kg<br /><br />
+									Karma Pool: <input type="number" name="attr_karma_pool" value=1 />/<input type="number" name="attr_karma_pool_max" value=1 /><br /><br />
+									Good Karma: <input type="number" name="attr_good_karma" value=0 />
+								</td>
+							</tr>
+						</table>
+					<div><br /><br />
+						<table>
+							<td>
+								<table>
+							
+						
+								<td>
+									<tr>
+										<td>
+										</td>
+										<td style='text-align:left'><h4>Natural</h4></td>
+										<td><h4>Augmented</h4></td>
+									</tr>
+									<tr>
+										<td>
+											Body
+										</td>
+										<td>
+											<input type="number" name="attr_body" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_body_test" title="Body Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Body (Natural)}} {{attribtest= [[ [[@{body} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_body_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_body_test" title="Body Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Body (Augmented)}} {{attribtest= [[ [[@{body|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Quickness
+										</td>
+										<td>
+											<input type="number" name="attr_agility" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_quick_test" title="Quickness Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Quickness Test (Natural)}} {{attribtest= [[ [[@{agility} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_agility_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_quick_test" title="Quickness Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Quickness (Augmented)}} {{attribtest= [[ [[@{agility|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Strength
+										</td>
+										<td>
+											<input type="number" name="attr_strength" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_strength_test" title="Strength Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Strength (Natural)}} {{attribtest= [[ [[@{strength} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_strength|max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_str_test" title="Strength Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Strength (Augmented)}} {{attribtest= [[ [[@{strength|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Charisma
+										</td>
+										<td>
+											<input type="number" name="attr_Charisma" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_cha_test" title="Charisma Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Charisma (Natural)}} {{attribtest= [[ [[@{Charisma} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_Charisma_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_cha_test" title="Charisma Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Charisma (Augmented)}} {{attribtest= [[ [[@{Charisma|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Intelligence
+										</td>
+										<td>
+											<input type="number" name="attr_intelligence" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_int_test" title="Intelligence Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Intelligence (Natural)}} {{attribtest= [[ [[@{intelligence} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_intelligence_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_int_test" title="Intelligence Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Intelligence (Augmented)}} {{attribtest= [[ [[@{intelligence|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Willpower
+										</td>
+										<td>
+											<input type="number" name="attr_willpower" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_will_test"  title="Willpower Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Willpower (Natural)}} {{attribtest= [[ [[@{willpower} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_willpower_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_will_test" title="Willpower Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Willpower (Augmented)}} {{attribtest= [[ [[@{willpower|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+									</tr>
+									<tr style='height:20px;' />
+									<tr>
+										<td>
+											Essence
+										</td>
+										<td>
+											<input type="number" name="attr_essence" value=6 step='0.01' min='0.01' style='width:55px' />
+											<button type="roll" class="d6-dice" name="roll_essence_test" title="Essence Test" value="&{template:attrib} {{attribname=Essence}} {{attribtest= [[ [[floor(@{essence}) + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Magic
+										</td>
+										<td>
+											<input type="number" name="attr_magic" style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_magic_test" title="Magic Test" value="&{template:attrib} {{attribname=Magic}} {{attribtest= [[ [[@{magic} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr style='height:20px;' />
+									<tr>
+										<td>
+											Reaction
+										</td>
+										<td>
+											<input type="number" name="attr_reaction" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_reaction_test" title="Reaction Test without cyber-/bio- ware" value="&{template:attrib} {{attribname=Reaction (Natural)}} {{attribtest= [[ [[@{reaction} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button>
+										</td>
+										<td style='text-align:center'>	
+											<input type="number" name="attr_reaction_max" value=1 min=1 style='width:55px;' />
+											<button type="roll" class="d6-dice" name="roll_augment_reaction_test" title="Reaction Test with cyber-/bio- ware" value="&{template:attrib} {{attribname=Reaction (Augmented)}} {{attribtest= [[ [[@{reaction|max} + ?{How many dice are you taking from your pool?|0}]]d6>[[?{What is the Target Number?} + @{stun_pen} + @{wound_pen}]]!! ]] }}"></button><br />
+										</td>				
+									</tr>
+									<tr>
+										<td>
+											Initiative
+										</td>
+										<td>
+											<input type="number" name="attr_initiative" value=1 min=1 style='width:39px;' />d6
+											<button type="roll" class="d6-dice" name="roll_initiative" title="Initiative Roll without cyber-/bio- ware" value="&{template:init} {{type=Initiative Roll (Natural)}} {{character=@{character_name}}} {{roll=[[@{initiative}d6+@{reaction}-@{stun_pen}-@{wound_pen} &{tracker}]]}}"></button>
+										</td>
+										<td style='text-align:center'>
+											<input type="number" name="attr_initiative_max" value=1 min=1 style='width:39px;' />d6
+											<button type="roll" class="d6-dice" name="roll_augment_initiative" title="Initiative Roll with cyber-/bio- ware" value="&{template:init} {{type=Initiative Roll (Augmented)}} {{character=@{character_name}}} {{roll=[[@{initiative|max}d6+@{reaction|max}-@{stun_pen}-@{wound_pen} &{tracker}]]}}"></button>
+										</td>				
+									</tr>
+								</td>
+								</table>
+								<td style='padding-left:30'>
+									<h2 style='text-align:center'>Condition Monitor</h2>
+									<table style='text-align:center; vertical-align:top'>
+										<tr>
+											<td></td>
+											<td>Uninjured</td>
+											<td>Light Stun</td>
+											<td>Moderate Stun</td>
+											<td>Serious Stun</td>
+											<td>Unconscious</td>
+										</tr>
+										<tr>
+											<td>
+												Stun:<input type='number' name='attr_stun_pen' value=0 style='display:none' />
+											</td>
+											<td>
+												<input type="radio" name="attr_stun" value=0 CHECKED>
+											</td>
+											<td>
+												<input type="radio" name="attr_stun" value=1>
+												<input type="radio" name="attr_stun" value=2>
+											</td>
+											<td>
+												<input type="radio" name="attr_stun" value=3>
+												<input type="radio" name="attr_stun" value=4>
+												<input type="radio" name="attr_stun" value=5>
+											</td>
+											<td>
+												<input type="radio" name="attr_stun" value=6>
+												<input type="radio" name="attr_stun" value=7>
+												<input type="radio" name="attr_stun" value=8>
+												<input type="radio" name="attr_stun" value=9>
+											</td>
+											<td>
+												<input type="radio" name="attr_stun" value=10>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Physical:<input type='number' name='attr_wound_pen' value=0 style='display:none' />
+											</td>
+											<td>
+												<input type="radio" name="attr_wounds" value=0 CHECKED>
+											</td>
+											<td>
+												<input type="radio" name="attr_wounds" value=1>
+												<input type="radio" name="attr_wounds" value=2>
+											</td>
+											<td>
+												<input type="radio" name="attr_wounds" value=3>
+												<input type="radio" name="attr_wounds" value=4>
+												<input type="radio" name="attr_wounds" value=5>
+											</td>
+											<td>
+												<input type="radio" name="attr_wounds" value=6>
+												<input type="radio" name="attr_wounds" value=7>
+												<input type="radio" name="attr_wounds" value=8>
+												<input type="radio" name="attr_wounds" value=9>
+											</td>
+											<td>
+												<input type="radio" name="attr_wounds" value=10>
+											</td>
+										</tr>
+										<tr>
+											<td>
+											</td>
+											<td>Uninjured</td>
+											<td>Light Wound</td>
+											<td>Moderate Wound</td>
+											<td>Serious Wound</td>
+											<td>Unconscious<br />
+											maybe dead</td>
+										</tr>
+										<tr>
+											<td colspan="6" style='text-align:center'>
+												Physical damage overflow: <input type="number" name="attr_overflow" value=0 min=0 />
+											</td>
+										</tr>
+									</table>
+											
+								</td>
+							</tr>
+						</table>
+					</div>
